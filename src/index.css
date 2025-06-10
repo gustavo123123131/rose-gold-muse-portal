@@ -1,0 +1,82 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 348 83% 81%;
+    --primary-foreground: 0 0% 9%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 63%;
+
+    --accent: 348 83% 81%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 348 83% 81%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a0a0f 50%, #0f0506 100%);
+    min-height: 100vh;
+  }
+  
+  .hero-gradient {
+    background: linear-gradient(135deg, rgba(248, 200, 220, 0.1) 0%, rgba(177, 156, 217, 0.05) 50%, rgba(232, 180, 184, 0.1) 100%);
+  }
+  
+  .card-gradient {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(26, 10, 15, 0.9) 100%);
+    backdrop-filter: blur(10px);
+  }
+  
+  .rose-gold-border {
+    border: 2px solid;
+    border-image: linear-gradient(45deg, #e8b4b8, #d4af37, #f8c8dc) 1;
+  }
+  
+  .text-gradient {
+    background: linear-gradient(135deg, #f8c8dc, #e8b4b8, #d4af37);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .btn-primary {
+    background: linear-gradient(135deg, #e8b4b8, #d4af37);
+    box-shadow: 0 4px 20px rgba(232, 180, 184, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(232, 180, 184, 0.5);
+  }
+}
